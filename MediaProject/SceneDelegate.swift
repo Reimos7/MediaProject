@@ -8,15 +8,24 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    // UIWindow가 뷰 컨트롤러를 보여주는 역할
+    // 이게 없으면 특정 화면을 가질수 없으니 특정 화면을 가질수 있는 상태를 가져야함
+    
     var window: UIWindow?
 
-
+    // 스토리보드에서 엔트리포인트를 찾아서 화면을 띄어주는 함수
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let scene = (scene as? UIWindowScene) else { return }
+        
+        // 빈화면을 끼워주는 역할
+        window = UIWindow(windowScene: scene)
+        
+        let vc = LottoViewController()
+        window?.rootViewController = vc // 스토리보드의 엔트리포인트
+        window?.makeKeyAndVisible() // 실제로 사용자한테 보여지게끔 사용하는 코드
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

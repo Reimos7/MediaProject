@@ -10,12 +10,17 @@
 		6EE9E5E82C0F678B00570590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5E72C0F678B00570590 /* AppDelegate.swift */; };
 		6EE9E5EA2C0F678B00570590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5E92C0F678B00570590 /* SceneDelegate.swift */; };
 		6EE9E5EC2C0F678B00570590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5EB2C0F678B00570590 /* ViewController.swift */; };
-		6EE9E5EF2C0F678B00570590 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E5EE2C0F678B00570590 /* Base */; };
 		6EE9E5F12C0F678D00570590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E5F02C0F678D00570590 /* Assets.xcassets */; };
 		6EE9E5F42C0F678D00570590 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E5F32C0F678D00570590 /* Base */; };
 		6EE9E5FD2C0F67B800570590 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE9E5FC2C0F67B800570590 /* SnapKit */; };
 		6EE9E6002C0F684D00570590 /* NetflixHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5FF2C0F684D00570590 /* NetflixHomeViewController.swift */; };
 		6EE9E6022C0F85AF00570590 /* NetflixMemberShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E6012C0F85AF00570590 /* NetflixMemberShipViewController.swift */; };
+		6EE9E6CA2C15D42700570590 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E6C92C15D42700570590 /* .gitignore */; };
+		6EE9E6CD2C15D9EF00570590 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE9E6CC2C15D9EF00570590 /* Kingfisher */; };
+		6EE9E6D52C15DA0F00570590 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE9E6D42C15DA0F00570590 /* Toast */; };
+		6EE9E6D72C15DFBF00570590 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E6D62C15DFBF00570590 /* APIKey.swift */; };
+		6EE9E6D92C15E10400570590 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E6D82C15E10400570590 /* LottoViewController.swift */; };
+		6EE9E6DC2C15EC5E00570590 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6EE9E6DB2C15EC5E00570590 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +28,14 @@
 		6EE9E5E72C0F678B00570590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EE9E5E92C0F678B00570590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6EE9E5EB2C0F678B00570590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6EE9E5EE2C0F678B00570590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EE9E5F02C0F678D00570590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EE9E5F32C0F678D00570590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EE9E5F52C0F678D00570590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE9E5FF2C0F684D00570590 /* NetflixHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixHomeViewController.swift; sourceTree = "<group>"; };
 		6EE9E6012C0F85AF00570590 /* NetflixMemberShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixMemberShipViewController.swift; sourceTree = "<group>"; };
+		6EE9E6C92C15D42700570590 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6EE9E6D62C15DFBF00570590 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		6EE9E6D82C15E10400570590 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE9E6CD2C15D9EF00570590 /* Kingfisher in Frameworks */,
+				6EE9E6DC2C15EC5E00570590 /* Alamofire in Frameworks */,
+				6EE9E6D52C15DA0F00570590 /* Toast in Frameworks */,
 				6EE9E5FD2C0F67B800570590 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +56,7 @@
 		6EE9E5DB2C0F678B00570590 = {
 			isa = PBXGroup;
 			children = (
+				6EE9E6C92C15D42700570590 /* .gitignore */,
 				6EE9E5E62C0F678B00570590 /* MediaProject */,
 				6EE9E5E52C0F678B00570590 /* Products */,
 			);
@@ -66,10 +77,11 @@
 				6EE9E5E72C0F678B00570590 /* AppDelegate.swift */,
 				6EE9E5E92C0F678B00570590 /* SceneDelegate.swift */,
 				6EE9E5EB2C0F678B00570590 /* ViewController.swift */,
-				6EE9E5ED2C0F678B00570590 /* Main.storyboard */,
 				6EE9E5F02C0F678D00570590 /* Assets.xcassets */,
 				6EE9E5F22C0F678D00570590 /* LaunchScreen.storyboard */,
 				6EE9E5F52C0F678D00570590 /* Info.plist */,
+				6EE9E6D62C15DFBF00570590 /* APIKey.swift */,
+				6EE9E6D82C15E10400570590 /* LottoViewController.swift */,
 			);
 			path = MediaProject;
 			sourceTree = "<group>";
@@ -101,6 +113,9 @@
 			name = MediaProject;
 			packageProductDependencies = (
 				6EE9E5FC2C0F67B800570590 /* SnapKit */,
+				6EE9E6CC2C15D9EF00570590 /* Kingfisher */,
+				6EE9E6D42C15DA0F00570590 /* Toast */,
+				6EE9E6DB2C15EC5E00570590 /* Alamofire */,
 			);
 			productName = MediaProject;
 			productReference = 6EE9E5E42C0F678B00570590 /* MediaProject.app */;
@@ -132,6 +147,9 @@
 			mainGroup = 6EE9E5DB2C0F678B00570590;
 			packageReferences = (
 				6EE9E5FB2C0F67B800570590 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6EE9E6CB2C15D9EF00570590 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6EE9E6D32C15DA0F00570590 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				6EE9E6DA2C15EC5E00570590 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 6EE9E5E52C0F678B00570590 /* Products */;
 			projectDirPath = "";
@@ -147,9 +165,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE9E6CA2C15D42700570590 /* .gitignore in Resources */,
 				6EE9E5F12C0F678D00570590 /* Assets.xcassets in Resources */,
 				6EE9E5F42C0F678D00570590 /* Base in Resources */,
-				6EE9E5EF2C0F678B00570590 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +181,9 @@
 				6EE9E5EC2C0F678B00570590 /* ViewController.swift in Sources */,
 				6EE9E5E82C0F678B00570590 /* AppDelegate.swift in Sources */,
 				6EE9E6022C0F85AF00570590 /* NetflixMemberShipViewController.swift in Sources */,
+				6EE9E6D92C15E10400570590 /* LottoViewController.swift in Sources */,
 				6EE9E5EA2C0F678B00570590 /* SceneDelegate.swift in Sources */,
+				6EE9E6D72C15DFBF00570590 /* APIKey.swift in Sources */,
 				6EE9E6002C0F684D00570590 /* NetflixHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6EE9E5ED2C0F678B00570590 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6EE9E5EE2C0F678B00570590 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6EE9E5F22C0F678D00570590 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -321,7 +333,6 @@
 				INFOPLIST_FILE = MediaProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -354,7 +365,6 @@
 				INFOPLIST_FILE = MediaProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -407,6 +417,30 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		6EE9E6CB2C15D9EF00570590 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		6EE9E6D32C15DA0F00570590 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		6EE9E6DA2C15EC5E00570590 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -414,6 +448,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6EE9E5FB2C0F67B800570590 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		6EE9E6CC2C15D9EF00570590 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EE9E6CB2C15D9EF00570590 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		6EE9E6D42C15DA0F00570590 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EE9E6D32C15DA0F00570590 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		6EE9E6DB2C15EC5E00570590 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EE9E6DA2C15EC5E00570590 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
