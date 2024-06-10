@@ -18,10 +18,11 @@ struct Lotto: Decodable{
     
 }
 
+
 class LottoViewController: UIViewController {
     
-   
-    let lottoCount = Array(1...1000)
+    var lottoNumbers = ""
+    
     
     let numberTextField = UITextField()
     let infoLabel = UILabel()
@@ -30,6 +31,7 @@ class LottoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
        
         
         configureHierarchy()
@@ -96,11 +98,11 @@ extension LottoViewController: UIPickerViewDelegate,UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        return lottoCount.count
+        return lottoNumbers.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return "\(lottoCount)"
+        return lottoNumbers
     }
     
     
