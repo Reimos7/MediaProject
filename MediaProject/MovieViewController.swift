@@ -15,13 +15,16 @@ struct Movie: Decodable{
     let rank: String
 }
 
+
 class MovieViewController: UIViewController {
+    
+    var list: [Movie] = []
     
     let movieTextField = UITextField()
     let searchButton = UIButton()
     let tableView = UITableView()
 
-    var list: [Movie] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class MovieViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.identifier)
         
         configureHierarchy()
         configureLayout()
@@ -89,7 +92,7 @@ class MovieViewController: UIViewController {
         { response in
             switch response.result{
             case .success(let value):
-                
+                self.list = value
                 print(value)
                 self.tableView.reloadData()
             case .failure(let error):
@@ -111,9 +114,8 @@ extension MovieViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
         
-       
-        
-        cell.titleLabel.text = list[indexPath.row].boxofficeType
+        // Thread 1: Fatal error: Index out of range
+//        cell.titleLabel.text = list[indexPath.row].boxofficeType
         
         return cell
     }
