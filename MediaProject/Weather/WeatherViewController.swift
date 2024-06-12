@@ -20,7 +20,7 @@ class WeatherViewController: UIViewController {
     
     
     
-    var list: [Weather] = []
+    var list = MainWeather(weather: [], countryName: sys(country: ""))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,12 +83,20 @@ class WeatherViewController: UIViewController {
     
     func callRequest() {
         
-        let url = APIURL.weatherURL
-        AF.request(url).responseDecodable(of: [Weather].self) { response in
+        let url = "\(APIURL.weatherURL)\(locationTextField.text!)"
+        
+        let header: HTTPHeaders = ["appid": APIKey.weatherKey]
+        
+        AF.request(url, method: .get, headers: header).validate(statusCode: 200..<500).responseDecodable(of: MainWeather.self)
+        { response in
             switch response.result {
             case .success(let value):
-                print("SUCCESS")
+               
                 self.list = value
+               
+                self.weatherLabel1.text = "\(self.list.countryName.country)"
+                self.weatherLabel2.text = self.list.weather.description
+                
                 
             case .failure(let error):
                 print(error)

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 빈화면을 끼워주는 역할
         window = UIWindow(windowScene: scene)
         
-        let vc = MovieViewController()
+        let vc = WeatherViewController()
         window?.rootViewController = vc // 스토리보드의 엔트리포인트
         window?.makeKeyAndVisible() // 실제로 사용자한테 보여지게끔 사용하는 코드
         

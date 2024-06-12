@@ -33,10 +33,25 @@ class MovieTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints { make in
-            make.edges.equalTo(contentView.safeAreaLayoutGuide)
+            //make.edges.equalTo(contentView.safeAreaLayoutGuide)
+            
+            make.top.equalTo(contentView.safeAreaLayoutGuide).offset(10)
+            make.leading.equalTo(contentView.safeAreaLayoutGuide).offset(20)
+            make.width.equalTo(200)
+            make.height.equalTo(30)
         }
+        dayLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+            make.leading.equalTo(contentView.safeAreaLayoutGuide).offset(20)
+            make.width.equalTo(100)
+            make.height.equalTo(30)
+        }
+        
         titleLabel.textColor = .brown
         titleLabel.font = .boldSystemFont(ofSize: 20)
+        
+        dayLabel.textColor = .blue
+        dayLabel.font = .boldSystemFont(ofSize: 10)
     }
     // init이랑 세트임
     required init?(coder: NSCoder) {
