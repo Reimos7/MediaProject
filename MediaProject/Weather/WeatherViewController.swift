@@ -20,8 +20,7 @@ class WeatherViewController: UIViewController {
     
     
     
-    var list = MainWeather(weather: [], countryName: sys(country: ""))
-    
+    var list = WeatherInfo(weather: [], wind: Wind(speed: 0, deg: 0),  sys: Sys(country: ""), name: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,13 +52,13 @@ class WeatherViewController: UIViewController {
         weatherLabel1.snp.makeConstraints { make in
             make.top.equalTo(locationTextField.snp.bottom).offset(30)
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(30)
-            make.width.equalTo(100)
+            make.width.equalTo(200)
             make.height.equalTo(50)
         }
         weatherLabel2.snp.makeConstraints { make in
             make.top.equalTo(weatherLabel1.snp.bottom).offset(30)
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(30)
-            make.width.equalTo(100)
+            make.width.equalTo(200)
             make.height.equalTo(50)
         }
     }
@@ -83,20 +82,21 @@ class WeatherViewController: UIViewController {
     
     func callRequest() {
         
-        let url = "\(APIURL.weatherURL)\(locationTextField.text!)"
+        let url = "\(APIURL.weatherURL)\(locationTextField.text!)&appid=\(APIKey.weatherKey)"
         
-        let header: HTTPHeaders = ["appid": APIKey.weatherKey]
+
+        //let header: HTTPHeaders = ["appid": APIKey.weatherKey]
         
-        AF.request(url, method: .get, headers: header).validate(statusCode: 200..<500).responseDecodable(of: MainWeather.self)
+        AF.request(url).responseDecodable(of: WeatherInfo.self)
         { response in
             switch response.result {
             case .success(let value):
                
                 self.list = value
                
-                self.weatherLabel1.text = "\(self.list.countryName.country)"
-                self.weatherLabel2.text = self.list.weather.description
-                
+               // self.weatherLabel1.text = self.list.countryName.country
+                //self.weatherLabel2.text = value.weather.
+                self.weatherLabel1.text = "\(value.wind.speed)풍속"
                 
             case .failure(let error):
                 print(error)
