@@ -9,16 +9,12 @@ import UIKit
 import SnapKit
 import Alamofire
 
-struct Movie: Decodable{
-    let boxofficeType: String
-    let showRange: String
-    let rank: String
-}
+
 
 
 class MovieViewController: UIViewController {
     
-    var list: [Movie] = []
+    var list = BoxOffice(boxOfficeResult: Movie(boxofficeType: "", showRange: "", dailyBoxOfficeList: []))
     
     let movieTextField = UITextField()
     let searchButton = UIButton()
@@ -86,36 +82,60 @@ class MovieViewController: UIViewController {
     
     @objc func searchButtonClicked(){
         
+       // callRequestMovieInfo(query: movieTextField.text!)
         let url = "\(APIURL.movieURL)\(movieTextField.text!)"
-        
-        AF.request(url).responseDecodable(of: [Movie].self)
+        AF.request(url).responseDecodable(of: BoxOffice.self)
         { response in
             switch response.result{
             case .success(let value):
                 self.list = value
-                print(value)
                 self.tableView.reloadData()
+                
             case .failure(let error):
                 print(error)
+                
                 
             }
         }
     }
+    
+//    func callRequestMovieInfo(query: String){
+//        let param: Parameters = [
+//            "query": query
+//        ]
+//        
+//
+//        
+//        
+//        
+//        
+//        
+//        
+//    }
 }
 
 extension MovieViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        // 10개 미만일 경우도 설정
+        if list.boxOfficeResult.dailyBoxOfficeList.count < 10 {
+            return list.boxOfficeResult.dailyBoxOfficeList.count
+        } else {
+            return 10
+
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
         
-        // Thread 1: Fatal error: Index out of range
-//        cell.titleLabel.text = list[indexPath.row].boxofficeType
+        let data = list.boxOfficeResult.dailyBoxOfficeList[indexPath.row]
+        
+        cell.titleLabel.text = data.movieNm
+        cell.dayLabel.text = data.openDt
         
         return cell
     }

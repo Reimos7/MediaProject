@@ -11,12 +11,7 @@ import Alamofire
 
 class WeatherViewController: UIViewController {
     
-    struct Weather: Decodable{
-        
-        let temp: Double
-        let wind: Double
-        
-    }
+ 
     
     let locationTextField = UITextField()
     let checkButton = UIButton()
@@ -24,9 +19,12 @@ class WeatherViewController: UIViewController {
     let weatherLabel2 = UILabel()
     
     
+    
+    var list: [Weather] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         configureHierarchy()
         configureLayout()
         configureUI()
@@ -79,33 +77,27 @@ class WeatherViewController: UIViewController {
     }
     @objc func checkButtonClicked(){
         
+        callRequest()
         
-        let url = "\(APIURL.weatherURL)"
+    }
+    
+    func callRequest() {
         
-        AF.request(url).responseDecodable(of: Weather.self)
-        { response in
-            
-            switch response.result{
-                // 성공
+        let url = APIURL.weatherURL
+        AF.request(url).responseDecodable(of: [Weather].self) { response in
+            switch response.result {
             case .success(let value):
-                print(value)
-                self.weatherLabel1.text = "\(value.temp)도 입니다"
-                self.weatherLabel2.text = "\(value.wind)m/s의 바람"
-               
-               
+                print("SUCCESS")
+                self.list = value
                 
             case .failure(let error):
                 print(error)
-                self.weatherLabel1.text = "오류"
-                self.weatherLabel2.text = "오류"
-                
-                
             }
         }
         
     }
-    }
+
     
-    
+}
     
 

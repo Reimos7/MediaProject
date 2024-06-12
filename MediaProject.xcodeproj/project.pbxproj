@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E139E332C1884F800939FB0 /* PracticeLottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E139E322C1884F800939FB0 /* PracticeLottoViewController.swift */; };
 		6E139E352C18915000939FB0 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E139E342C18915000939FB0 /* WeatherViewController.swift */; };
+		6E139E422C198EB600939FB0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E139E412C198EB600939FB0 /* Movie.swift */; };
+		6E139E462C19A2F600939FB0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E139E452C19A2F600939FB0 /* Weather.swift */; };
 		6EE9E5E82C0F678B00570590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5E72C0F678B00570590 /* AppDelegate.swift */; };
 		6EE9E5EA2C0F678B00570590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5E92C0F678B00570590 /* SceneDelegate.swift */; };
 		6EE9E5EC2C0F678B00570590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E5EB2C0F678B00570590 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		6E139E322C1884F800939FB0 /* PracticeLottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLottoViewController.swift; sourceTree = "<group>"; };
 		6E139E342C18915000939FB0 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		6E139E412C198EB600939FB0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		6E139E452C19A2F600939FB0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		6EE9E5E42C0F678B00570590 /* MediaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE9E5E72C0F678B00570590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EE9E5E92C0F678B00570590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E139E432C1992C100939FB0 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9E6E52C170A6F00570590 /* MovieViewController.swift */,
+				6EE9E6E72C17342D00570590 /* MovieTableViewCell.swift */,
+				6E139E412C198EB600939FB0 /* Movie.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		6E139E442C19A2E500939FB0 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				6E139E342C18915000939FB0 /* WeatherViewController.swift */,
+				6E139E452C19A2F600939FB0 /* Weather.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		6EE9E5DB2C0F678B00570590 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +104,8 @@
 		6EE9E5E62C0F678B00570590 /* MediaProject */ = {
 			isa = PBXGroup;
 			children = (
+				6E139E442C19A2E500939FB0 /* Weather */,
+				6E139E432C1992C100939FB0 /* Movie */,
 				6EE9E5FE2C0F681F00570590 /* NetFlix */,
 				6EE9E5E72C0F678B00570590 /* AppDelegate.swift */,
 				6EE9E5E92C0F678B00570590 /* SceneDelegate.swift */,
@@ -90,10 +115,7 @@
 				6EE9E5F52C0F678D00570590 /* Info.plist */,
 				6EE9E6D62C15DFBF00570590 /* APIKey.swift */,
 				6EE9E6D82C15E10400570590 /* LottoViewController.swift */,
-				6EE9E6E52C170A6F00570590 /* MovieViewController.swift */,
-				6EE9E6E72C17342D00570590 /* MovieTableViewCell.swift */,
 				6E139E322C1884F800939FB0 /* PracticeLottoViewController.swift */,
-				6E139E342C18915000939FB0 /* WeatherViewController.swift */,
 			);
 			path = MediaProject;
 			sourceTree = "<group>";
@@ -192,11 +214,13 @@
 			files = (
 				6EE9E5EC2C0F678B00570590 /* ViewController.swift in Sources */,
 				6EE9E5E82C0F678B00570590 /* AppDelegate.swift in Sources */,
+				6E139E422C198EB600939FB0 /* Movie.swift in Sources */,
 				6EE9E6E82C17342D00570590 /* MovieTableViewCell.swift in Sources */,
 				6EE9E6022C0F85AF00570590 /* NetflixMemberShipViewController.swift in Sources */,
 				6EE9E6E62C170A6F00570590 /* MovieViewController.swift in Sources */,
 				6EE9E6D92C15E10400570590 /* LottoViewController.swift in Sources */,
 				6E139E332C1884F800939FB0 /* PracticeLottoViewController.swift in Sources */,
+				6E139E462C19A2F600939FB0 /* Weather.swift in Sources */,
 				6EE9E5EA2C0F678B00570590 /* SceneDelegate.swift in Sources */,
 				6EE9E6D72C15DFBF00570590 /* APIKey.swift in Sources */,
 				6EE9E6002C0F684D00570590 /* NetflixHomeViewController.swift in Sources */,
