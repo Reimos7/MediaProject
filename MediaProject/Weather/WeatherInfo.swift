@@ -7,13 +7,28 @@ import Foundation
 
 // MARK: - Welcome
 struct WeatherInfo: Codable {
+    let coord: Coord
     let weather: [Weather]
     let wind: Wind
     let sys: Sys
     let name: String
+    let main: Main
     
 }
+struct Coord: Codable {
+    let lon, lat: Double
+}
 
+// MARK: - Main
+struct Main: Codable {
+    let temp: Double
+    let humidity: Int
+
+    enum CodingKeys: String, CodingKey {
+        case temp
+        case humidity  // 습도
+    }
+}
 
 // MARK: - Sys
 struct Sys: Codable {
